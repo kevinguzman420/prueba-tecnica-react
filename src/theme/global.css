@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-primary: #7C3AED;
+  --color-primary-light: #A855F7;
+  --color-accent: #C026D3;
+  --color-accent-pink: #DB2777;
+  --color-success: #22C55E;
+  --color-success-light: #BBF7D0;
+  --color-warning: #F97316;
+  --color-warning-light: #FED7AA;
+  --color-danger: #EF4444;
+  --color-danger-light: #FECACA;
+  
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F3F4F6;
+  --color-gray-200: #E5E7EB;
+  --color-gray-300: #D1D5DB;
+  --color-gray-400: #9CA3AF;
+  --color-gray-500: #6B7280;
+  --color-gray-700: #374151;
+  --color-gray-900: #111827;
+  
+  --color-bg-main: #F1F1F0;
+  --color-bg-dark: #1A1A2E;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-modal: 0 20px 60px rgba(0,0,0,0.15);
+
+  /* Fonts */
+  --font-inter: 'Inter', sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-gray-200 box-border;
+  }
+  body {
+    @apply bg-bg-dark font-inter antialiased m-0 p-0 text-gray-900;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.2s ease;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { 
+  background: rgba(0, 0, 0, 0.15); 
+  @apply rounded-full;
+}
